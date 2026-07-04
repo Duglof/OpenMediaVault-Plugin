@@ -23,9 +23,19 @@ The plugin is created in the new format using YAML and PHP files.
 ### Administration
 - Linux Mint 22 Cinnamon
 - Putty for remote connection on OpenMediaVault NAS (terminal console) 
-- Required knowledge : vi editor : Very few orders
+- Required knowledge
+  - debian system command
+
 | Command | Description |
-| vi <filename> | Open or edit a file.
+|---------------|-----------------------------------------------|
+| cp | Copy file |
+| rm | Remove file |
+| cat | reads the content of a file and print it|
+  - vi editor : Very few orders
+  
+| Command | Description |
+|---------------|-----------------------------------------------|
+| vi filename | Open or edit a file. |
 | i       |  Switch to Insert mode |
 | Escape  | Switch to Command mode |
 | yy      | Yank (copy) a line of text. |
