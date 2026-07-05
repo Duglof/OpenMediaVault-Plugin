@@ -62,15 +62,18 @@ To add this plugin that displays its status on the dashboard and visualizes logs
 
 | Full path name | Description |
 |---------|-----|
+| /usr/sbin/omv-gdrive-john-bisync-wrapper | wrapper executed every hour |
+| /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc | remote procedure call |
 | /usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml | dashboard widgets |
 | /usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml | component |
 | /usr/share/openmediavault/workbench/navigation.d/services.gdrivejohnbisync.yaml | navigation |
 | /usr/share/openmediavault/workbench/route.d/services.gdrivejohnbisync.yaml | route |
-| /usr/sbin/omv-gdrive-john-bisync-wrapper | wrapper executed every hour |
 
 It appears mandatory to follow the file naming format for the plugin to be valid.
 
 ### /usr/sbin/omv-gdrive-john-bisync-wrapper
+The wrapper is executed regularly to perform synchronization and creates two result files: `status.json` and `omv-bisync-gdrive-john.log`.
+
 - Create /usr/sbin/omv-gdrive-john-bisync-wrapper with the content displayed by clicking the link below.
 
 ![omv-gdrive-john-bisync-wrapper](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
@@ -106,3 +109,5 @@ It appears mandatory to follow the file naming format for the plugin to be valid
   - sudo apt install curl -y
   - curl https://rclone.org/install.sh | sudo bash
 - However, no configuration has been performed. **The goal here is to create and test the plugin, not to configure rclone**.
+
+### /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc
