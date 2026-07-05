@@ -111,3 +111,6 @@ The wrapper is executed regularly to perform synchronization and creates two res
 - However, no configuration has been performed. **The goal here is to create and test the plugin, not to configure rclone**.
 
 ### /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc
+Create /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc with the content displayed by clicking the link below.
+[gdrivejohnbisync.inc](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
+
