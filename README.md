@@ -47,3 +47,15 @@ The plugin is created in the new format using YAML and PHP files.
 | :w      | Save and continue editing |
 | :q!     | Quit vi and do not save changes |
 | :x      | Save and quit |
+
+# Manual file installation
+## Plugin name format
+The plugin will have two names:
+
+| Noms | Format | Example | Description |
+|------------|--------------------|------------------------|-------------------|
+| Long name  | omv-name-with-dash | omv-gdrive-john-bisync | Name with dash    |
+| Short name | namewithoutdash    | gdrivejohnbisync       | Name without dash |
+
+## Plugin files
+To add this plugin that displays its status on the dashboard and visualizes logs, you must create the following files on the system disk:
