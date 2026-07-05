@@ -68,12 +68,18 @@ To add this plugin that displays its status on the dashboard and visualizes logs
 | /usr/share/openmediavault/workbench/route.d/services.gdrivejohnbisync.yaml | route |
 | /usr/sbin/omv-gdrive-john-bisync-wrapper | wrapper executed every hour |
 
+It appears mandatory to follow the file naming format for the plugin to be valid.
+
 ### /usr/sbin/omv-gdrive-john-bisync-wrapper
-Create /usr/sbin/omv-gdrive-john-bisync-wrapper with the content displayed by clicking the link below.
+- Create /usr/sbin/omv-gdrive-john-bisync-wrapper with the content displayed by clicking the link below.
 
 ![omv-gdrive-john-bisync-wrapper](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
 
-Grant execute permission to the wrapper using the following command:
-- chmod +x /usr/sbin/omv-gdrive-john-bisync-wrapper
-
-
+- Grant execute permission to the wrapper using the following command:
+  - chmod +x /usr/sbin/omv-gdrive-john-bisync-wrapper
+- When the wrapper is executed, the following two files are created:
+  - Status file : /var/lib/openmediavault/gdrive-john-bisync/status.json
+  - Log file : /var/log/omv-bisync-gdrive-john.log
+- It appears mandatory for the fields in the status.json file to meet the following conditions:
+  - No empty field
+  - No field with the value unknown 
