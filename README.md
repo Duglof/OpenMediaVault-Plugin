@@ -5,6 +5,8 @@ I created a plugin to synchronize my Google Drive with my NAS, display the synch
 The plugin is created in the new format using YAML and PHP files.
 
 ## Références
+### Plugin Development Documentation V8.x
+- https://docs.openmediavault.org/en/8.x/development/plugins.html
 ### Hardware
 - NAS Tandberd D400 (internal SSD 2G too small for OpenMediaVault full options)
 - 2GB DDR3 RAM upgraded to 6GB 1333 V1.5 204 pins
