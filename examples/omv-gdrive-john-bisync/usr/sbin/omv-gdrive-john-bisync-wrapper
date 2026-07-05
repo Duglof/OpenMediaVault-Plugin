@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# --- Configuration ---
+LOG="/var/log/omv-bisync-gdrive-john.log"
+STATUS="/var/lib/openmediavault/gdrive-john-bisync/status.json"
+
+SRC="rclone_omv_gdrive_john:"
+DST="/srv/dev-disk-by-uuid-13148950-d77b-4860-92e2-a1be9248a73b/gdriveJohn"
+
+# --- Exécution bisync ---
+/usr/bin/rclone bisync "$SRC" "$DST" --verbose > "$LOG" 2>&1
+RET=$?
+
+# --- Analyse du résultat ---
+if [ $RET -eq 0 ]; then
+    STATUS_VALUE="ok"
+    MESSAGE="Synchro réussie"
+else
+    STATUS_VALUE="error"
+    MESSAGE="Erreur bisync (code $RET)"
+fi
+
+# --- Mise à jour du fichier de statut ---
+mkdir -p "$(dirname "$STATUS")"
+
+cat <<EOF > "$STATUS"
+{
+  "status": "$STATUS_VALUE",
+  "lastRun": "$(date '+%Y-%m-%d %H:%M:%S')",
+  "message": "$MESSAGE"
+}
+EOF
+
+chmod 644 "$STATUS"
+
+exit $RET
+
