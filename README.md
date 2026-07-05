@@ -68,3 +68,5 @@ To add this plugin that displays its status on the dashboard and visualizes logs
 | /usr/share/openmediavault/workbench/route.d/services.gdrivejohnbisync.yaml | route |
 | /usr/sbin/omv-gdrive-john-bisync-wrapper | wrapper executed every hour |
 
+### /usr/sbin/omv-gdrive-john-bisync-wrapper
+
