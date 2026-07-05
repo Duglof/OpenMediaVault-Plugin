@@ -76,7 +76,7 @@ The wrapper is executed regularly to perform synchronization and creates two res
 
 - Create /usr/sbin/omv-gdrive-john-bisync-wrapper with the content displayed by clicking the link below.
 
-![omv-gdrive-john-bisync-wrapper](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
+[omv-gdrive-john-bisync-wrapper](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
 
 - Grant execute permission to the wrapper using the following command:
   - chmod +x /usr/sbin/omv-gdrive-john-bisync-wrapper
