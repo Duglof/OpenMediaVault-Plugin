@@ -62,13 +62,52 @@ To add this plugin that displays its status on the dashboard and visualizes logs
 
 | Full path name | Description |
 |---------|-----|
+| /usr/sbin/omv-gdrive-john-bisync-wrapper | wrapper executed every hour |
+| /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc | remote procedure call |
 | /usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml | dashboard widgets |
 | /usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml | component |
 | /usr/share/openmediavault/workbench/navigation.d/services.gdrivejohnbisync.yaml | navigation |
 | /usr/share/openmediavault/workbench/route.d/services.gdrivejohnbisync.yaml | route |
-| /usr/sbin/omv-gdrive-john-bisync-wrapper | wrapper executed every hour |
+
+It appears mandatory to follow the file naming format for the plugin to be valid.
 
 ### /usr/sbin/omv-gdrive-john-bisync-wrapper
-[wrapper](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
+The wrapper is executed regularly to perform synchronization and creates two result files: `status.json` and `omv-bisync-gdrive-john.log`.
 
-[README](your-project-name/blob/master/your-subfolder/README.md)
+- Create /usr/sbin/omv-gdrive-john-bisync-wrapper with the content displayed by clicking the link below.
+
+![omv-gdrive-john-bisync-wrapper](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
+
+- Grant execute permission to the wrapper using the following command:
+  - chmod +x /usr/sbin/omv-gdrive-john-bisync-wrapper
+- When the wrapper is executed, the following two files are created:
+  - Status file : /var/lib/openmediavault/gdrive-john-bisync/status.json
+  - Log file : /var/log/omv-bisync-gdrive-john.log
+- It appears mandatory for the fields in the status.json file to meet the following conditions:
+  - No empty field
+  - No field with the value unknown 
+- Manual wrapper test
+  - Manually execute the wrapper with the following command:
+    - /usr/sbin/omv-gdrive-john-bisync-wrapper
+- Checking status.json with the following command:
+  - cat /var/lib/openmediavault/gdrive-john-bisync/status.json
+  - Expected result:
+```
+   {
+  "status": "error",
+  "lastRun": "2026-07-05 18:08:45",
+  "message": "Erreur bisync (code 1)"
+   }
+```
+- Checking log file with the following command:
+  - cat /var/log/omv-bisync-gdrive-john.log
+  - Expected result:
+```
+2026/07/05 18:08:45 CRITICAL: Failed to create file system for "rclone_omv_gdrive_john:": didn't find section in config file ("rclone_omv_gdrive_john")
+```
+- The expected result is correct because the latest version of rclone was installed using the following commands:
+  - sudo apt install curl -y
+  - curl https://rclone.org/install.sh | sudo bash
+- However, no configuration has been performed. **The goal here is to create and test the plugin, not to configure rclone**.
+
+### /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc
