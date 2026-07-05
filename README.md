@@ -69,6 +69,5 @@ To add this plugin that displays its status on the dashboard and visualizes logs
 | /usr/sbin/omv-gdrive-john-bisync-wrapper | wrapper executed every hour |
 
 ### /usr/sbin/omv-gdrive-john-bisync-wrapper
-[wrapper](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
+![wrapper](OpenMediaVault-Plugin/blob/master/examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
 
-[README](your-project-name/blob/master/your-subfolder/README.md)
