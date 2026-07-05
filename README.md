@@ -112,7 +112,7 @@ The wrapper is executed regularly to perform synchronization and creates two res
 
 ### /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc
 - Create /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc with the content displayed by clicking the link below.
-[gdrivejohnbisync.inc](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
+[gdrivejohnbisync.inc](examples/omv-gdrive-john-bisync/usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc)
 - After creating the file, you must execute the following command for the RPC to be taken into account:
   - systemctl restart openmediavault-engined
 - Test the RPC by executing the following commands:
