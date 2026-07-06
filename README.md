@@ -76,7 +76,7 @@ The wrapper is executed regularly to perform synchronization and creates two res
 
 - Create /usr/sbin/omv-gdrive-john-bisync-wrapper with the content displayed by clicking the link below.
 
-![omv-gdrive-john-bisync-wrapper](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
+[omv-gdrive-john-bisync-wrapper](examples/omv-gdrive-john-bisync/usr/sbin/omv-gdrive-john-bisync-wrapper)
 
 - Grant execute permission to the wrapper using the following command:
   - chmod +x /usr/sbin/omv-gdrive-john-bisync-wrapper
@@ -111,3 +111,26 @@ The wrapper is executed regularly to perform synchronization and creates two res
 - However, no configuration has been performed. **The goal here is to create and test the plugin, not to configure rclone**.
 
 ### /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc
+- If you want to adapt the RPC, you must observe the following rules:
+  - The class name must be different for each plugin.
+  - It appears to be customary to capitalize the beginning of each word.
+  - $file = '/var/lib/openmediavault/gdrive-john-bisync/status.json'; must point to your status.json file created by the wrapper
+  - $file = '/var/log/omv-bisync-gdrive-john.log'; must point to your status.json file created by the wrapper 
+- Create /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc with the content displayed by clicking the link below.
+[gdrivejohnbisync.inc](examples/omv-gdrive-john-bisync/usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc)
+- After creating the file, you must execute the following command for the RPC to be taken into account:
+  - systemctl restart openmediavault-engined
+- Test the RPC by executing the following commands:
+- omv-rpc gdrivejohnbisync getStatus
+```
+[{"status":"error","lastRun":"2026-07-05 18:08:45","message":"Erreur bisync (code 1)"}]
+```
+- omv-rpc gdrivejohnbisync getLog
+```
+[{"line":"2026\/07\/05 18:08:45 CRITICAL: Failed to create file system for \"rclone_omv_gdrive_john:\": didn't find section in config file (\"rclone_omv_gdrive_john\")"}]
+```
+- Result in case of error:
+```
+{"response":null,"error":{"code":0,"message":"RPC service 'gdrivejohnbisync' not found.","trace":"OMV\\HttpErrorException: RPC service 'gdrivejohnbisync' not found. in \/usr\/share\/php\/openmediavault\/rpc\/rpc.inc:116\nStack trace:\n#0 \/usr\/sbin\/omv-engined(546): OMV\\Rpc\\Rpc::call()\n#1 {main}"}}
+```
+### /usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml
