@@ -228,13 +228,13 @@ To enable the creation of a Debian package, the following files have been added 
 
 ## Install omv-gdrive-john-bisync
 - To install execute the command
- - sudo dpkg -i ../omv-gdrive-john-bisync_1.0_all.deb
+  - sudo dpkg -i ../omv-gdrive-john-bisync_1.0_all.deb
 
 ## Remove omv-gdrive-john-bisync
 - To remove execute the command
- - dpkg -r omv-gdrive-john-bisync
+  - dpkg -r omv-gdrive-john-bisync
 - To purge execute the command
- - dpkg -P omv-gdrive-john-bisync
+  - dpkg -P omv-gdrive-john-bisync
 
 
 
