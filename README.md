@@ -216,7 +216,7 @@ To enable the creation of a Debian package, the following files have been added 
 
 ### Installation of the necessary tools on the NAS
 - Warning: This takes up space on the NAS system disk.
-- sudo apt install build-essential devscripts debhelper
+- sudo apt install build-essential devscripts debhelper unzip
 
 ### Build package
 - Download the GitHub project ZIP file (OpenMediaVault-Plugin-main.zip)
