@@ -69,7 +69,9 @@ To add this plugin that displays its status on the dashboard and visualizes logs
 | /usr/share/openmediavault/workbench/navigation.d/services.gdrivejohnbisync.yaml | navigation |
 | /usr/share/openmediavault/workbench/route.d/services.gdrivejohnbisync.yaml | route |
 
-It appears mandatory to follow the file naming format for the plugin to be valid.
+- It appears mandatory to follow the file naming format for the plugin to be valid.
+- It seems that, in order to appear in the "services" group, certain names must begin with "services."
+- Maintain indentation by using spaces.
 
 ### /usr/sbin/omv-gdrive-john-bisync-wrapper
 The wrapper is executed regularly to perform synchronization and creates two result files: `status.json` and `omv-bisync-gdrive-john.log`.
