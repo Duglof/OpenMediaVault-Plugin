@@ -170,9 +170,13 @@ The wrapper is executed regularly to perform synchronization and creates two res
 
 [navigation.d/services.gdrivejohnbisync.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/navigation.d/services.gdrivejohnbisync.yaml)
 
+### /usr/share/openmediavault/workbench/route.d/services.gdrivejohnbisync.yaml
 
+- Create /usr/share/openmediavault/workbench/navigation.d/services.gdrivejohnbisync.yaml with the content displayed by clicking the link below.
 
+[route.d/services.gdrivejohnbisync.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/route.d/services.gdrivejohnbisync.yaml)
 
+...
 
 
 
