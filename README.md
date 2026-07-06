@@ -1,6 +1,7 @@
 # OpenMediaVault Plugin
 
 This project should enable you to create your own plugin for the OpenMediaVault V8 NAS.
+
 I created a plugin to synchronize my Google Drive with my NAS, display the synchronization status on the dashboard, and view synchronization logs to understand what is happening in the event of an error.
 The plugin is created in the new format using YAML and PHP files.
 
