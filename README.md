@@ -134,3 +134,12 @@ The wrapper is executed regularly to perform synchronization and creates two res
 {"response":null,"error":{"code":0,"message":"RPC service 'gdrivejohnbisync' not found.","trace":"OMV\\HttpErrorException: RPC service 'gdrivejohnbisync' not found. in \/usr\/share\/php\/openmediavault\/rpc\/rpc.inc:116\nStack trace:\n#0 \/usr\/sbin\/omv-engined(546): OMV\\Rpc\\Rpc::call()\n#1 {main}"}}
 ```
 ### /usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml
+- So that the dashboard is functional, you must observe the following rules:
+  - The ID must be different for each plugin.
+  - With this ID value, you can install the dashboard on several different NAS units.
+  - To generate a new ID, run the following commands:
+    - apt install uuid-runtime
+    - uuidgen
+- To test this plugin, you can keep this value for the ID.
+- Create /usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml with the content displayed by clicking the link below.
+[omv-gdrive-john-bisync-dashboard.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/dashboard.d/gdrivejohnbisync.inc)
