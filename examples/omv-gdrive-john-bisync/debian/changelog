@@ -1,0 +1,8 @@
+omv-gdrive-john-bisync (1.0) stable; urgency=low
+
+  * Initial release of the OMV bisync plugin for Google Drive John.
+
+ -- John <john@example.com>  Sat, 27 Jun 2026 19:46:00 +0200
+
+
+
