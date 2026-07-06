@@ -4,6 +4,11 @@ This project should enable you to create your own plugin for the OpenMediaVault 
 I created a plugin to synchronize my Google Drive with my NAS, display the synchronization status on the dashboard, and view synchronization logs to understand what is happening in the event of an error.
 The plugin is created in the new format using YAML and PHP files.
 
+## Screenshots
+### Dashbord
+![dashbord](docs/dashboard-with-google-drive-john.png)
+### Logs
+![logs](docs/logs-google-drive-john.png)
 ## Références
 ### Plugin Development Documentation V8.x
 - https://docs.openmediavault.org/en/8.x/development/plugins.html
