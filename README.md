@@ -1,6 +1,7 @@
 # OpenMediaVault Plugin
 
 This project should enable you to create your own plugin for the OpenMediaVault V8 NAS.
+
 I created a plugin to synchronize my Google Drive with my NAS, display the synchronization status on the dashboard, and view synchronization logs to understand what is happening in the event of an error.
 The plugin is created in the new format using YAML and PHP files.
 
@@ -9,7 +10,12 @@ The plugin is created in the new format using YAML and PHP files.
 ![dashbord](docs/dashboard-with-google-drive-john.png)
 ### Logs
 ![logs](docs/logs-google-drive-john.png)
-## Références
+### User dashbord settings
+![settings](docs/dashbord-widgets-activation.png)
+### Scheduled tasks for gdrivejohnbisync
+![scheduled task](docs/scheduled-task-google-drive-john.png)
+
+## References
 ### Plugin Development Documentation V8.x
 - https://docs.openmediavault.org/en/8.x/development/plugins.html
 ### Hardware
@@ -185,10 +191,14 @@ The wrapper is executed regularly to perform synchronization and creates two res
 - To update the OpenMediaVault web interface, run the following command:
   - omv-mkworkbench all
 
-### Dashboard is displayed
+### Enable Dashboard
 - If your dashboard is not displayed, go to user preferences and verify that the new dashboard is enabled.
-- Restart your NAS
+- Restart your NAS (if not displayed)
 
-
+### Execute wrapper every hour
+- Go to system / Scheduled tasks
+- Add a scheduled task to run the wrapper every hour.
+  - command : /usr/sbin/omv-gdrive-john-bisync-wrapper
+  - user : root
 
 
