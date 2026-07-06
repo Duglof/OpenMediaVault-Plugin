@@ -1,0 +1,7 @@
+version: "1.0"
+type: route
+data:
+  url: "/services/gdrivejohnbisync"
+  title: _("Google Drive John")
+  component: omv-services-gdrivejohnbisync-status-page
+
