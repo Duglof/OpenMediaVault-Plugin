@@ -1,7 +1,7 @@
 version: "1.0"
 type: dashboard-widget
 data:
-  id: 023bb78c-a555-4319-b301-77fd8546e7b9
+  id: 37269e6b-f2d3-48d2-af81-05e2789130cf
   permissions:
     role:
       - admin
