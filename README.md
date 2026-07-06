@@ -180,6 +180,9 @@ The wrapper is executed regularly to perform synchronization and creates two res
 - To update the OpenMediaVault web interface, run the following command:
   - omv-mkworkbench all
 
+### Dashboard is displayed
+- If your dashboard is not displayed, go to user preferences and verify that the new dashboard is enabled.
+- Restart your NAS
 
 
 
