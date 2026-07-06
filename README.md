@@ -156,7 +156,8 @@ The wrapper is executed regularly to perform synchronization and creates two res
 
 ### /usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml
 - So that the component is functional, you must observe the following rules:
-  - If you have modified gdrivejohnbisync.inc, the service field must contain the exact name of the RPC procedure. 
+  - If you have modified gdrivejohnbisync.inc, the service field must contain the exact name of the RPC procedure.
+  - If you have changed the plugin name, update the `name` and `id` fields.
 - Create /usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml with the content displayed by clicking the link below.
 
 [omv-services-gdrivejohnbisync-status-page.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml)
