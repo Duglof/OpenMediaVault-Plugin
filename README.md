@@ -133,3 +133,4 @@ The wrapper is executed regularly to perform synchronization and creates two res
 ```
 {"response":null,"error":{"code":0,"message":"RPC service 'gdrivejohnbisync' not found.","trace":"OMV\\HttpErrorException: RPC service 'gdrivejohnbisync' not found. in \/usr\/share\/php\/openmediavault\/rpc\/rpc.inc:116\nStack trace:\n#0 \/usr\/sbin\/omv-engined(546): OMV\\Rpc\\Rpc::call()\n#1 {main}"}}
 ```
+### /usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml
