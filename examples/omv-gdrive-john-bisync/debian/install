@@ -1,0 +1,7 @@
+usr/sbin/omv-gdrive-john-bisync-wrapper
+usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc
+usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml
+usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml
+usr/share/openmediavault/workbench/navigation.d/services.gdrivejohnbisync.yaml
+usr/share/openmediavault/workbench/route.d/services.gdrivejohnbisync.yaml
+

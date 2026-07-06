@@ -1,0 +1,15 @@
+Source: omv-gdrive-john-bisync
+Section: admin
+Priority: optional
+Maintainer: Toi <john@example.com>
+Standards-Version: 4.6.0
+Build-Depends: debhelper-compat (= 13)
+
+Package: omv-gdrive-john-bisync
+Architecture: all
+Depends: openmediavault (>= 8.0), bash, ${misc:Depends}
+Description: OMV plugin - Bisync Google Drive John
+ Provides a dashboard widget and detail page showing the status of
+ rclone bisync for Google Drive John, including OK/ERROR indicator
+ and log display.
+

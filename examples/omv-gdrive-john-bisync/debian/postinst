@@ -1,0 +1,34 @@
+#!/bin/bash
+set -e
+
+case "$1" in
+  configure)
+    # Create state directory
+    STATE_DIR="/var/lib/openmediavault/gdrive-john-bisync"
+    mkdir -p "$STATE_DIR"
+    chmod 755 "$STATE_DIR"
+    chown root:root "$STATE_DIR"
+
+    # Create initial status.json if missing
+    STATUS_FILE="$STATE_DIR/status.json"
+    if [ ! -f "$STATUS_FILE" ]; then
+      cat <<EOF > "$STATUS_FILE"
+{
+  "status": "???",
+  "lastRun": "",
+  "message": "Aucune synchronisation n'a encore été exécutée"
+}
+EOF
+      chmod 644 "$STATUS_FILE"
+    fi
+
+    # Ensure wrapper is executable
+    if [ -f /usr/sbin/omv-gdrive-john-bisync-wrapper ]; then
+      chmod 755 /usr/sbin/omv-gdrive-john-bisync-wrapper
+    fi
+  ;;
+esac
+
+exit 0
+
+
