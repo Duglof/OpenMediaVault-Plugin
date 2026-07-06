@@ -162,6 +162,17 @@ The wrapper is executed regularly to perform synchronization and creates two res
 
 [omv-services-gdrivejohnbisync-status-page.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml)
 
+### /usr/share/openmediavault/workbench/navigation.d/services.gdrivejohnbisync.yaml
+- So that the component is functional, you must observe the following rules:
+  - If you have changed the plugin name, update the `path`, `text` and 'url' fields.
+
+- Create /usr/share/openmediavault/workbench/navigation.d/services.gdrivejohnbisync.yaml with the content displayed by clicking the link below.
+
+[navigation.d/services.gdrivejohnbisync.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/navigation.d/services.gdrivejohnbisync.yaml)
+
+
+
+
 
 
 
