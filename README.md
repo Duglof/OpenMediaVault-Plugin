@@ -118,7 +118,7 @@ The wrapper is executed regularly to perform synchronization and creates two res
 ### /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc
 - If you want to adapt the RPC, you must observe the following rules:
   - The class name must be different for each plugin.
-  - It appears to be customary to capitalize the beginning of each word.
+  - The class name must contain the service name with an initial capital letter (but not for every word of the service name).
   - $file = '/var/lib/openmediavault/gdrive-john-bisync/status.json'; must point to your status.json file created by the wrapper
   - $file = '/var/log/omv-bisync-gdrive-john.log'; must point to your status.json file created by the wrapper 
 - Create /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc with the content displayed by clicking the link below.
