@@ -176,7 +176,11 @@ The wrapper is executed regularly to perform synchronization and creates two res
 
 [route.d/services.gdrivejohnbisync.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/route.d/services.gdrivejohnbisync.yaml)
 
-...
+### Make workbench 
+- To update the OpenMediaVault web interface, run the following command:
+  - omv-mkworkbench all
+
+
 
 
 
