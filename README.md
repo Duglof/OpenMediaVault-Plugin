@@ -144,6 +144,6 @@ The wrapper is executed regularly to perform synchronization and creates two res
 - To test this plugin, you can keep this value for the ID.
 - Create /usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml with the content displayed by clicking the link below.
 
-[omv-gdrive-john-bisync-dashboard.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/dashboard.d/gdrivejohnbisync.inc)
+[omv-gdrive-john-bisync-dashboard.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml)
 
 - After creating the file ...
