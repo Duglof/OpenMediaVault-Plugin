@@ -1,0 +1,19 @@
+version: "1.0"
+type: component
+data:
+  id: omv-services-gdrivejohnbisync-status-page
+  name: "omv-services-gdrivejohnbisync-status-page"
+  title: _("Google Drive John - Log")
+  type: datatablePage
+  config:
+    autoReload: true
+    store:
+      proxy:
+        service: gdrivejohnbisync
+        get:
+          method: getLog
+    columns:
+      - name: _("Log")
+        prop: line
+        flexGrow: 1
+
