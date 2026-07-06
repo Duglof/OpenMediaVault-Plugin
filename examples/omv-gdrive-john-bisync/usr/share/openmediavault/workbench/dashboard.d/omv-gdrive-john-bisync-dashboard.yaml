@@ -1,0 +1,24 @@
+version: "1.0"
+type: dashboard-widget
+data:
+  id: 023bb78c-a555-4319-b301-77fd8546e7b9
+  permissions:
+    role:
+      - admin
+  title: "Google Drive John"
+  type: datatable
+  reloadPeriod: 5000
+  datatable:
+    columns:
+      - name: "Statut"
+        prop: status
+      - name: "Dernière exécution"
+        prop: lastRun
+      - name: "Message"
+        prop: message
+    store:
+      proxy:
+        service: gdrivejohnbisync
+        get:
+          method: getStatus
+
