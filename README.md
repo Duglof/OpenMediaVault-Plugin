@@ -73,6 +73,7 @@ To add this plugin that displays its status on the dashboard and visualizes logs
 - It seems that, in order to appear in the "services" group, certain names must begin with "services."
 - Maintain indentation by using spaces.
 - The files must be created in this order for the tests to work.
+- It seems that creating the files up to the dashboard level is not enough to make it appear; all the files need to be created.
 
 ### /usr/sbin/omv-gdrive-john-bisync-wrapper
 The wrapper is executed regularly to perform synchronization and creates two result files: `status.json` and `omv-bisync-gdrive-john.log`.
