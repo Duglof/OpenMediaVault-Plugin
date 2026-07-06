@@ -2,7 +2,7 @@
 
 namespace Engined\Rpc;
 
-class OMVRpcServiceGdriveJohnlBisync extends \OMV\Rpc\ServiceAbstract
+class OMVRpcServiceGdrivejohnbisync extends \OMV\Rpc\ServiceAbstract
 {
     public function getName()
     {
