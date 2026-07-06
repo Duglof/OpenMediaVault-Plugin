@@ -117,6 +117,7 @@ The wrapper is executed regularly to perform synchronization and creates two res
   - $file = '/var/lib/openmediavault/gdrive-john-bisync/status.json'; must point to your status.json file created by the wrapper
   - $file = '/var/log/omv-bisync-gdrive-john.log'; must point to your status.json file created by the wrapper 
 - Create /usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc with the content displayed by clicking the link below.
+
 [gdrivejohnbisync.inc](examples/omv-gdrive-john-bisync/usr/share/openmediavault/engined/rpc/gdrivejohnbisync.inc)
 - After creating the file, you must execute the following command for the RPC to be taken into account:
   - systemctl restart openmediavault-engined
@@ -142,4 +143,7 @@ The wrapper is executed regularly to perform synchronization and creates two res
     - uuidgen
 - To test this plugin, you can keep this value for the ID.
 - Create /usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml with the content displayed by clicking the link below.
+
 [omv-gdrive-john-bisync-dashboard.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/dashboard.d/gdrivejohnbisync.inc)
+
+- After creating the file ...
