@@ -74,6 +74,7 @@ To add this plugin that displays its status on the dashboard and visualizes logs
 - Maintain indentation by using spaces.
 - The files must be created in this order for the tests to work.
 - It seems that creating the files up to the dashboard level is not enough to make it appear; all the files need to be created.
+- Preserve the case of filenames and their contents (uppercase, lowercase).
 
 ### /usr/sbin/omv-gdrive-john-bisync-wrapper
 The wrapper is executed regularly to perform synchronization and creates two result files: `status.json` and `omv-bisync-gdrive-john.log`.
@@ -140,6 +141,7 @@ The wrapper is executed regularly to perform synchronization and creates two res
 ```
 ### /usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml
 - So that the dashboard is functional, you must observe the following rules:
+  - If you have modified gdrivejohnbisync.inc, the service field must contain the exact name of the RPC procedure. 
   - The ID must be different for each plugin.
   - With this ID value, you can install the dashboard on several different NAS units.
   - To generate a new ID, run the following commands:
@@ -150,4 +152,15 @@ The wrapper is executed regularly to perform synchronization and creates two res
 
 [omv-gdrive-john-bisync-dashboard.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/dashboard.d/omv-gdrive-john-bisync-dashboard.yaml)
 
-- After creating the file ...
+- After creating the file, You need to create the other files so that the plugin appears in the OpenMediaVault GUI.
+
+### /usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml
+- So that the component is functional, you must observe the following rules:
+  - If you have modified gdrivejohnbisync.inc, the service field must contain the exact name of the RPC procedure. 
+- Create /usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml with the content displayed by clicking the link below.
+
+[omv-services-gdrivejohnbisync-status-page.yaml](examples/omv-gdrive-john-bisync/usr/share/openmediavault/workbench/component.d/omv-services-gdrivejohnbisync-status-page.yaml)
+
+
+
+
