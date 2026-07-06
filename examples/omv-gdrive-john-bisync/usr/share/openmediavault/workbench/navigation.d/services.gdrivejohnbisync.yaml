@@ -4,5 +4,5 @@ data:
   path: "services.gdrivejohnbisync"
   text: _("Google Drive John")
   icon: "mdi:google-drive"
-  url: "/services/gdrive-john-bisync"
+  url: "/services/gdrivejohnbisync"
 
