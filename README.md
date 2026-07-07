@@ -204,7 +204,8 @@ The wrapper is executed regularly to perform synchronization and creates two res
 # Debian package for omv-gdrive-john-bisync
 It is also possible to create a Debian package to install or remove all the files with a single command.
 
-## how to build debian package
+## How to build debian package
+### List of files for creating a Debian package
 To enable the creation of a Debian package, the following files have been added in examples/omv-gdrive-john-bisync
 - debian/changelog
 - debian/control
@@ -214,6 +215,16 @@ To enable the creation of a Debian package, the following files have been added 
 - debian/postrm
 - debian/rules
 
+Warning : The dh command must be preceded by a tab, not spaces!!
+### File customization
+If you have modified this plugin, you will need to adapt the files required to create the Debian package by making the following changes:
+- changelog : package name, version , email and date
+- control : Source, Package and Description
+- install : list of installed files
+- omv-gdrive-john-bisync.triggers : Its name must be 'packge name'.triggers
+- postinst : STATE_DIR, /usr/sbin/omv-gdrive-john-bisync-wrapper
+  
+ 
 ### Installation of the necessary tools on the NAS
 - Warning: This takes up space on the NAS system disk.
 - sudo apt install build-essential devscripts debhelper unzip
