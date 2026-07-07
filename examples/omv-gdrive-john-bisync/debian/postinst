@@ -3,6 +3,9 @@ set -e
 
 case "$1" in
   configure)
+    # Activate package triggers.
+    dpkg-trigger update-workbench
+
     # Create state directory
     STATE_DIR="/var/lib/openmediavault/gdrive-john-bisync"
     mkdir -p "$STATE_DIR"
